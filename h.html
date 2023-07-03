@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fruit Basket</title>
+        
+<!--code for font awesome cdn-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--code for font awesome cdn-->
+<link rel="stylesheet" href="new_userr.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="slides.css">
+<!--code for linking css file-->
+<link rel="stylesheet" type="text/css" href="s.css">
+<!--code for linking css file-->
+<link rel="icon" type="image/x-icon" href="f.png">
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="s.js"></script>
+<script src="cart.js"></script>
+<style>
+    body{
+        background-color: #fff;
+    }
+</style>
+<body>
+
+ 
+
+
+    <!--header section-->
+    <header class="header">
+        <a href="#" class="logo"><!--<img src="image/logo1.jpg">--><img src="f.png" style="width:auto; height:70px; margin-left:0px"></a>
+
+        
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">About</a>
+            <a href="#products">products</a>
+            <a href="#categories">categories</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="login-btn"></div>
+            
+        </div>
+
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Search here">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+
+
+        <div class="shopping-cart">
+            <div id="cart">
+                <h2>Cart</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: ₹<span id="total">0</span></p>
+              </div>
+        </div>
+
+        <!--<div class="shopping-cart">
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/lily.png">
+                <div class="content">
+                    <h3>Lillies</h3>
+                    <span class="price">$20.00</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/orchids.png">
+                <div class="content">
+                    <h3>Orchids</h3>
+                    <span class="price">$20.00</span>
+                    <span class="quantity">Qty : 2</span>
+                </div>
+            </div>
+            <div class="total">
+                total : $60.00/-
+            </div>
+            <a href="localstorageform/checkout.html" class="btn">Checkout</a>
+        </div>-->
+
+        <form action="#" class="login-form">
+       <!-- <a href="localstorageform/html.html" class="box">login form</h3>-->
+       <!-- <input type="email" placeholder="your email" class="box">
+        <input type="password" placeholder="your password" class="box">-->
+
+        <label for="userName">Email</label>
+        <input type="email" id="userName" placeholder="Username" class="box" required>
+
+        <label for="userPw">Password</label>
+        <input type="password" id= "userPw" placeholder="Password" class="box" required>
+
+        <div id="remember">
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                   style="display: inline-block;">
+            <label>Remember me</label>
+        </div>
+
+        <p>Forgot your password?
+            <a href="#">Click here</a>
+        </p>
+
+        
+        <p>Don't have an account?
+            <a href="../pr9/localstorageform/html.html">Sign up now</a>
+        </p>
+        <input type="submit" value="Login Now" class="btn">
+        </form>
+
+    </header>
+    <!--header section-->
+<!-- <div style="background-color: #fff;">
+    
+    <section class="home2" id="home">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="1.jpg" style="width:500px; height:auto">
+                <div class="text"><font class="font2" style="color:#ee1b24">Your Personalised</font></div>
+            </div>
+            <div class="mySlides fade">
+                <img src="2.jpg" style="width:500px; height:auto">
+                <div class="text"><font class="font2" style="color:#a5cf3b">Fruit Basket</font></div>
+            </div>
+            <div class="mySlides fade">
+                <img src="3.jpg" style="width:500px; height:auto">
+                <div class="text"><font class="font2" style="color:#feca09">At Your Doorstep</font></div>
+            </div>
+        </div>
+<div style="text-align:end; margin-bottom:0px">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</section></div> -->
+<div style="background-color: #fff; top:0px">
+<div class="content5">
+    <div class="slides5">
+      <div class="slide_content5 1">
+        <h1 class="show"><img src="f.png" style="width:240px; height:auto">
+            <div class="text" ><font class="font2" style="color:#a5cf3b">Your Personalised</font></div></h1>
+      </div>
+      <div class="slide_content5 2">
+        <h1 class="show"><img src="1.jpg" style="width:350px; height:auto">
+            <div class="text"><font class="font2" style="color:#ee1b24">Fruit Basket</font></div></h1>
+      </div>
+      <div class="slide_content5 2">
+        <h1 class="show"><img src="2.jpg" style="width:350px; height:auto">
+            <div class="text"><font class="font2" style="color:#feca09">At Your Doorstep</font></div></h1>
+      </div>
+      <div class="slide_content5 4">
+        <h1 class="show"><h1 class="show"><img src="3.jpg" style="width:350px; height:auto">
+            <div class="text"><font class="font2" style="color:#ee1b24"></font></div></h1></h1>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="grad">
+        <section  class ="home4" id="home">
+            
+            <div class="content">
+                <center><font style="color:#fff; font-size:60px"><br><br>
+                <h3 style="font-family:autography; font-size:200px; font-weight:100">fruit basket</h3>
+                <p>The best in segment</p>
+                <br>
+                
+                </font></center>
+            </div>
+            </section>
+</div>
+
+<div class="grad">
+    <section  class ="home3" id="home">
+        
+        <div class="content">
+            <center><font style="color:#fff; font-size:60px"><br><br>
+            <h3>Pick your own<span> Fruits</span></h3>
+            <p>Freshly picked from the Farm</p>
+            <p>Delivered to any corner of the city</p><br>
+            <a href="#" class="btn" style="background-color: #fff;">Pick your fruits</a>
+            </font></center>
+        </div>
+        </section>
+</div>
+<div class="grad">
+    <section  class ="home4" id="home">
+        
+        <div class="content">
+            <center><font style="color:#fff; font-size:60px"><br><br>
+            <h3>Orange<span> in your Range</span></h3>
+            <p>Quickest delivery</p>
+            <p>Bigger, Better, Fresher</p><br>
+            <a href="#" class="btn" style="background-color: #fff;">Pick your fruits</a>
+            </font></center>
+        </div>
+        </section>
+</div>
+
+    <!--banner section-->
+<div style="background-color: #ee1b24;">
+    <!--our features section--><br><br><br><br><br>
+    <section class="features" id="features">
+        <h1 class="heading" style="font-size:50px; color:#feca09">Why Fruit Basket</h1>
+        <div class="box-container">
+            <div class="box"><a href="#" class="btn">
+                <img src="ff.png">
+                <h3>Fresh And Lovely</h3>
+                <p>Always fresh, straight to your dining table from the farm</p>
+            </a>
+            </div>
+
+            <div class="box"><a href="#" class="btn">
+                <img src="delivery.png">
+                <h3>Free Delivery</h3>
+                <p>Delivering to every part of the city, that too Real Quick!</p>
+            </a>
+            </div>
+
+            <div class="box"><a href="#" class="btn">
+                <img src="payment_features.jpg">
+                <h3>Easy Payments</h3>
+                <p>COD, online, UPI.. The way you like</p>
+            </a>
+            </div>
+        </div>
+    </section><br><br><br><br><br><br>
+    <!--our features section-->
+</div>
+
+<br><br><br><br><br><br>
+    <!--our products section-->
+    <div>
+    <section class="products" id="products">
+        <h1 class="heading">GLIMPSE OF OUR STORE</h1>
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide box">
+                    <div style="background-image:url(m.jpeg); background-size:100%; background-repeat:no-repeat"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    
+                    </div>
+                    
+                    <h1>MANGO</h1>
+                    
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                
+                  
+                </div>
+
+                <div class="swiper-slide box">
+                    <div style="background-image:url(b.jpeg); background-size:100%; background-repeat:no-repeat"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                    <h1>PINK ORANGE</h1>
+                    
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                   
+                </div>
+
+                <div class="swiper-slide box">
+                    <div style="background-image:url(c.jpeg); background-size:100%; background-repeat:no-repeat"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                    <h1>PITHAYA</h1>
+            
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                
+                </div>
+                </div>
+                </div>
+
+                <div class="swiper product-slider">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div style="background-image:url(d.jpeg); background-size:100%; background-repeat:no-repeat"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                    <h1>RASPBERRY</h1>
+             
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+               
+                </div>
+
+
+                <div class="swiper-slide box">
+                    <div style="background-image:url(p.jpeg); background-size:100%; background-repeat:no-repeat"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                    <h1>PINEAPPLE</h1>
+                    
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+               
+                </div>
+
+
+                <div class="swiper-slide box">
+                    <div style="background-image:url(ggg.jpeg); background-size:100%; background-repeat:no-repeat"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                    <h1>KIWI</h1>
+                   
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                  
+                </div>
+
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!--our products section-->
+    <br><br><br><br><br><br>
+    <!--our categories section-->
+    <div class="grad" id="categories">
+        <section  class ="home3" id="home">
+            
+            <div class="content">
+                <center><font style="color:#fff; font-size:60px"><br><br>
+                <h3>Let's GO<span> Shopping</span></h3>
+                <p>Freshly picked from the Farm</p>
+                <br>
+                <a href="carrtt.html" class="btn" style="background-color: #fff;">Pick your fruits</a>
+                </font></center>
+            </div>
+            </section>
+    </div>
+<!--cart-->
+
+<div style="background-color:#fff">
+<center><div class="clearfix">
+    <br><br><br><br><br><br>
+        <div class="container2">
+            
+            <div class="product2" id="ye">
+                <center><img src="1.jpg" style="height:auto; width: 300px"></center>
+                <h2>STRAWBERRY<br></h2>
+                
+                <button class="add-to-cart" onclick="location.href = 'carrtt.html';">Add to Cart</button>
+              </div>
+        </div>
+    
+        <div class="container2">
+            <div class="product2">
+                <center><img src="2.jpg" style="height:auto; width: 300px"></center>
+                <h2>GRAPES<br></h2>
+                
+                <button class="add-to-cart" onclick="location.href = 'carrtt.html';">Add to Cart</button>
+              </div>
+        </div>
+    
+        <div class="container2">
+            <div class="product2">
+                <center><img src="3.jpg" style="height:auto; width: 300px"></center>
+                <h2>LEMON<br></h2>
+                
+                <button class="add-to-cart" onclick="location.href = 'carrtt.html';">Add to Cart</button>
+              </div>
+        </div>
+    
+        <div class="container2">
+            <div class="product2">
+                <center><img src="4.jpg" style="height:auto; width: 300px"></center>
+                <h2>KIWI</h2>
+                <p></p><br>
+                <button class="add-to-cart" onclick="location.href = 'carrtt.html';">Add to Cart</button>
+              </div>
+        </div>
+    
+        <div class="container2">
+            <div class="product2">
+                <center><img src="5.jpg" style="height:auto; width: 300px"></center>
+                <h2>APPLE</h2>
+                <p></p><br>
+                <button class="add-to-cart" onclick="location.href = 'carrtt.html';">Add to Cart</button>
+              </div>
+        </div>
+    
+        <div class="container2">
+            <div class="product2">
+                <center><img src="6.jpg" style="height:auto; width: 300px"></center>
+                <h2>RASPBERRY</h2>
+                <p></p><br>
+                <button class="add-to-cart" onclick="location.href = 'carrtt.html';">Add to Cart</button>
+              </div>
+        </div>
+    
+        
+    </div>
+       
+      
+       
+
+    
+
+    <!--our categories section-->
+
+    <div class="cart">
+        <br><br>
+        <center><h1 style="margin-bottom: 20px;"></h1></center>
+        <section id="nn"></section>
+        <section id="total"></section>
+    </div>
+
+    <!--Blog section-->
+
+    <section class="blogs" id="blogs">
+        <h1 class="heading">Our blogs</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="cb.jpeg">
+                <div class="content">
+                    <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i>By User</a>
+                    <a href="#"><i class="fa fa-calendar"></i>1st May, 2023</a>
+                </div>
+                <h3>Health benifits of fruits</h3>
+                <p>Lorem ipsum dolor sit amet con adipisicing elit sed</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+
+        
+            <div class="box">
+                <img src="c.jpeg">
+                <div class="content">
+                    <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i>By User</a>
+                    <a href="#"><i class="fa fa-calendar"></i>1st May, 2023</a>
+                </div>
+                <h3>Health benifits of fruits</h3>
+                <p>Lorem ipsum dolor sit amet con adipisicing elit sed</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+
+        
+            <div class="box">
+                <img src="gf.png">
+                <div class="content">
+                    <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i>By User</a>
+                    <a href="#"><i class="fa fa-calendar"></i>1st May, 2023</a>
+                </div>
+                <h3>Health benifits of fruits</h3>
+                <p>Lorem ipsum dolor sit amet con adipisicing elit sed</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!--Blog section-->
+
+    <div class="grad">
+        <section  class ="home4" id="home">
+            
+            <div class="content">
+                <center><font style="color:rgb(8, 7, 7); font-size:20px"><br><br><br><br><br><br><br>
+                <h3 style="font-size:100px; font-weight:400; color:#fff">Drop a Review!</h3>
+                
+                
+
+                <div class="containerr" id="review">
+                  <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country" >
+                      <option value="Australia">Australia</option>
+                      <option value="Germany">Germany</option>
+                      <option value="UK">UK</option>
+                      <option value="France">France</option>
+                      <option value="Japan">Japan</option>
+                      <option value="India">India</option>
+                      <option value="Canada">Canada</option>
+                      <option value="USA">USA</option>
+                      <option value="other">other</option>
+                    </select>
+                
+                    <label for="country">How would you rate our services?</label>
+                    <select id="rate" name="rating" >
+                      <option value="Excellent">Excellent</option>
+                      <option value="Very Good">Very Good</option>
+                      <option value="Good">Good</option>
+                      <option value="Average">Average</option>
+                      <option value="Poor">Poor</option>
+                      <option value="Disgusting">Disgusting</option>
+                    </select>
+                
+                    <label for="subject">Type in a review</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                  </form>
+                
+                </div>
+                <br>
+                
+                </font></center>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            </section>
+</div>
+    <!--review form-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <!--contact section-->
+<br><br><br>
+    <section class="contact">
+        <div class="contact-box">
+            <h4>MY ACCOUNT</h4>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">WishList</a></li>
+        </div>
+
+        <div class="contact-box">
+            <h4>QUICK LINKS</h4>
+            <li><a href="#">Store Location</a></li>
+            <li><a href="#">Orders Tracking</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">FAQs</a></li>
+        </div>
+
+        <div class="contact-box">
+            <h4>MY ACCOUNT</h4>
+            <li><a href="#">Privacy Page</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Delivery Information</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </div>
+
+        <div class="contact-box">
+            <h4>CUSTOMER SERVICE</h4>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Help & Contact Us</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Online Stores</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </div>
+        <div class="contact-box">
+            <h4>Fruit Basket</h4>
+            <h5>Connect with us</h5>
+            <div class="social">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram" ></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--contact section-->
+<br><br><br><br>
+<div style="background-color:#fff; height:30px"><h1 style="color: #ee1b24;">©Dev Patel - 21BCE050</h1></div>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>Fruit</title>
+    </head>
+    <link rel="stylesheet" href="new_userr.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/x-icon" href="f.png">
+    
+<body>
+  
+
+
+
+   
+    
+<center><div class="clearfix">
+    <div class="container">
+        
+        <div class="product">
+            <center><img src="1.jpg" style="height:auto; width: 300px"></center>
+            <h2>Strawberry</h2>
+            <p>Price: ₹10</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="2.jpg" style="height:auto; width: 300px"></center>
+            <h2>Product 2</h2>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="3.jpg" style="height:auto; width: 300px"></center>
+            <h2>Product 3</h2>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="4.jpg" style="height:auto; width: 400px"></center>
+            <h2>Product 1</h2>
+            <p>Price: ₹10</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="5.jpg" style="height:auto; width: 400px"></center>
+            <h2>Product 2</h2>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="6.jpg" style="height:auto; width: 400px"></center>
+            <h2>Product 3</h2>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="3.jpg" style="height:auto; width: 400px"></center>
+            <h2>Product 4</h2>
+            <p>Price: ₹10</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="3.jpg" style="height:auto; width: 400px"></center>
+            <h2>Product 5</h2>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <center><img src="3.jpg" style="height:auto; width: 400px"></center>
+            <h2>Product 6</h2>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+          </div>
+    </div></center>
+</div>
+   
+  
+    <div id="cart">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total">0</span></p>
+    </div>
+</body>
+<script>
+      // JavaScript code for the page
+      let cart = [];
+      let total = 0;
+  
+      function addToCart(price) {
+        cart.push(price);
+        total += price;
+        updateCart();
+      }
+  
+      function updateCart() {
+        const cartItems = document.getElementById("cart-items");
+        cartItems.innerHTML = "";
+  
+        cart.forEach((price) => {
+          const li = document.createElement("li");
+          li.textContent = `$${price}`;
+          cartItems.appendChild(li);
+        });
+  
+        const totalElement = document.getElementById("total");
+        totalElement.textContent = total;
+  
+        const cartElement = document.getElementById("cart");
+        cartElement.style.display = "block";
+      }
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "20%";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "#fff";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "#fff";
+      }
+      
+      window.onscroll = function() {myFunction()};
+      
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+</script>
+
+</html>
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Page</title>
+  <link rel="stylesheet" href="extra.css">
+  <style>
+    /* CSS styles for the page */
+    #cart {
+      display: none;
+    }
+    .product {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      max-width: 20%;
+    }
+    .add-to-cart {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .total {
+      font-weight: bold;
+    }
+    #myBar {
+        width: 10%;
+        height: 30px;
+        background-color: #04AA6D;
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: white;
+      }
+  </style>
+</head>
+<body>
+    <!-- <div id="myProgress">
+        <div id="myBar">10%</div>
+    </div> -->
+  <h1>Shopping Page</h1>
+
+    
+  
+    </div>
+          
+</div>
+<div class="product">
+  <h2>Product 1</h2>
+  <p>Price: $10</p>
+  <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+</div>
+
+  <div class="product">
+    <h2>Product 2</h2>
+    <p>Price: $20</p>
+    <button class="add-to-cart" onclick="addToCart(20)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h2>Product 3</h2>
+    <p>Price: $10</p>
+    <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h2>Product 4</h2>
+    <p>Price: $20</p>
+    <button class="add-to-cart" onclick="addToCart(20)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h2>Product 5</h2>
+    <p>Price: $10</p>
+    <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h2>Product 6</h2>
+    <p>Price: $20</p>
+    <button class="add-to-cart" onclick="addToCart(20)">Add to Cart</button>
+  </div>
+
+  <div id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </div>
+
+  <div id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </div>
+
+  <div id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </div>
+
+  <div id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </div>
+
+</div>
+
+
+  <script>
+    // JavaScript code for the page
+    let cart = [];
+    let total = 0;
+
+    function addToCart(price) {
+      cart.push(price);
+      total += price;
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById("cart-items");
+      cartItems.innerHTML = "";
+
+      cart.forEach((price) => {
+        const li = document.createElement("li");
+        li.textContent = `$${price}`;
+        cartItems.appendChild(li);
+      });
+
+      const totalElement = document.getElementById("total");
+      totalElement.textContent = total;
+
+      const cartElement = document.getElementById("cart");
+      cartElement.style.display = "block";
+    }
+    var i = 0;
+    function move() 
+    {
+        if (i == 0) 
+        {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 10;
+            var id = setInterval(frame, 10);
+            function frame() 
+            {
+                if (width >= 100) 
+                {
+                clearInterval(id);
+                i = 0;
+            } 
+            else 
+            {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width + "%";
+            }
+        }
+    }
+}
+  </script>
+</body>
+</html>

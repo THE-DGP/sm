@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+        <title>
+            index
+        </title>
+    </head>
+    <body>
+        
+        <div>
+            <center><p style="font-family: calistha; font-size: 200px; margin-top:200px; margin-bottom: 0px">welcome to fruitbasket.com</p>
+            <p class="space" style="font-weight: bold; font-size:200%">THE ULTIMATE SHOPPING EXPERIENCE</p><br><br><br>
+            <p><button><a href="#yus" style="text-decoration: none; font-size: 20px; color:#fff">Click here to begin</a></button></p></center>
+
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="login" id="yus">
+            <form name='form-login'>
+        
+                <h1>REGISTER</h1>
+        
+                <label for="name">Email</label>
+                <input type="email" id="name" placeholder="Username" required>
+        
+                <label for="pw">Password</label>
+                <input type="password"
+                       id= "pw"
+                       placeholder="Password" required>
+        
+                <ul class="helper-text">
+                    <li class="length">Must be at least 8 characters long.</li>
+                    <li class="lowercase">Must contain a lowercase letter.</li>
+                    <li class="uppercase">Must contain an uppercase letter.</li>
+                    <li class="special">Must contain a number or special character.</li>
+                </ul>
+                <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+                <br><br>
+                <p>Already have an account?</p>
+                <p><a href="#login" style="color: #fff; text-decoration:none">click here to login!</a></p>
+        
+            </form>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="login" id="login">
+            <form name='form-login'>
+        
+                <h1>SIGN IN</h1>
+        
+                <label for="userName">Email</label>
+                <input type="email" id="userName" placeholder="Username" required>
+        
+                <label for="userPw">Password</label>
+                <input type="password" id= "userPw" placeholder="Password" required>
+        
+                <div id="remember">
+                    <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                           style="display: inline-block;">
+                    <label>Remember me</label>
+                </div>
+        
+                <input id= "login_btn" type="submit" value="Login" onclick="check()">
+        
+            </form>
+        </div><br><br><br><br><br><br><br><br><br><br>
+        
+        
+    </body>
+    <script src="login.js"></script>
+</html>

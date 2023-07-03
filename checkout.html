@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout Form</title>
+  <style>
+    body {
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: raleway;
+        margin: 0;
+        padding: 0;
+        background-image: url(aa.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color:#fff
+      }
+      
+      form {
+        background-color: transparent;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 100px;
+      }
+      
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="month"],
+      input[type="checkbox"] {
+        border: 1px solid #ccc;
+        background-color: transparent;
+        border-radius: 3px;
+        font-size: 16px;
+        color:#fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+      }
+      
+      input:hover
+      {
+        background-color: #fff;
+        border-color: #fff;
+        color:#4CAF50;
+      }
+      
+      input[type="submit"] {
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      
+      input[type="checkbox"] {
+        margin-top: 5px;
+      }
+      
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      p:hover
+      {
+        transform: scale(1.06);
+        transition: 1s;
+        
+        
+      }
+      a
+      {
+        color:#fff;
+      }
+      a:hover
+      {
+        
+        font-weight: 900;
+      }
+      
+  </style>
+  <script>
+    function validateForm() {
+      // Get the form values
+      const phone = document.getElementById("phone").value;
+      const ccNum = document.getElementById("cc-num").value;
+      const agree = document.getElementById("agree").checked;
+      const over18 = document.getElementById("over18").checked;
+      
+      // Check if phone number is numeric only
+      if (isNaN(phone)) {
+        alert("Please enter a numeric phone number.");
+        return false;
+      }
+      
+      // Check if credit card number is numeric only
+      if (isNaN(ccNum)) {
+        alert("Please enter a numeric credit card number.");
+        return false;
+      }
+      
+      // Check if both checkboxes are checked
+      if (!agree || !over18) {
+        alert("Please check the 'I agree' and 'I am 18+' checkboxes.");
+        return false;
+      }
+      
+      // Redirect to another page if all fields are valid
+      window.location.href = "https://example.com/thank-you.html";
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="cc-num">Credit Card Number:</label>
+    <input type="text" id="cc-num" name="cc-num" required>
+    
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required>
+    
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+    
+    <label for="expiry-date">Expiry Date:</label>
+    <input type="month" id="expiry-date" name="expiry-date" required>
+    
+    <label for="agree">I agree to the terms and conditions:</label>
+    <input type="checkbox" id="agree" name="agree" required>
+    
+    <label for="over18">I am over 18 years old:</label>
+    <input type="checkbox" id="over18" name="over18" required>
+    
+    <input type="submit" value="Submit">
+    <center><p><a href="h.html" style="text-decoration: none; font-size:30px">click here to continue shopping!</a></p></center>
+  </form>
+ 
+</body>
+</html>
